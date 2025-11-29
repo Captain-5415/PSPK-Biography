@@ -4,16 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-image: url(./img-1.jpg);
+            background-size: 81%;
+        }
+        .container {
+            backdrop-filter: blur(50px);
+            width: 25%;
+            margin: 12% 5% 1% 65%;
+            padding: 10px 10px 10px 10px;
+            border-style: solid;
+            border: none;
+            border-color: #d83432;
+            border-width: 2px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: serif;
+        }
+        .container h1 {
+            color: #d83432;
+        }
+
+        .container p {
+            color: #d83432;
+            padding: 5px;
+        }
+
+        .container input {
+            outline: none;
+            border: 3px solid black;
+            padding: 5px;
+            border-radius: 5px;
+            background: transparent;
+            color: #c8c8c8;
+            border-bottom-color: #939aa4;
+            border-bottom-width: 2px;
+        }
+        .container a{
+            text-decoration: none;
+            color: #d83432;
+        }
+        .container button{
+            background-color: red;
+            color: #939aa4;
+            border-radius: 30%;
+            padding: 15px;
+            width: 25%;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-    <center>
-        <form action="./biography.html" target="_self">
-            <h1>Login Page</h1>
+        <div class="container">
+            <form action="./biography.html" target="_self">
+            <h1><u>Login Page</u></h1>
             <p>Email : <input type="email" required placeholder="Enter your email"/></p>
             <p>Password : <input type="password"  placeholder="Enter password"/></p>
             <p><a href="">Forget Password / Email</a></p>
             <p><button><strong>Login</strong></button></p>
         </form>
-    </center>
+        </div>
 </body>
 </html>

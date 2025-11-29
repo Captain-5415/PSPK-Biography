@@ -1,35 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {}
+
+        .container {
+            backdrop-filter: blur(5px);
+            width: 30%;
+            margin: 4% 0% 0% 4%;
+            padding: 10px 10px 10px 10px;
+            border-style: solid;
+            border-color: #c8c8c8;
+            border-bottom: none;
+            border-right: none;
+            border-width: 2px;
+            border-radius: 10px;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .container h1 {
+            color: #c8c8c8;
+        }
+
+        .container p {
+            color: #c8c8c8;
+        }
+
+        .container input {
+            outline: none;
+            border: 1px solid #c8c8c8;
+            padding: 5px;
+            border-radius: 5px;
+            background: transparent;
+            color: #c8c8c8;
+            border-bottom-color: black;
+            border-bottom-width: 2px;
+            border-right-color: black;
+            border-right-width: 2px;
+        }
+
+        .container button{
+            background-color: #c8c8c8;
+            color: black;
+            border-radius: 30%;
+            padding: 15px;
+            width: 40%;
+            cursor: pointer;
+        }
+        #bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            /* Send video to background */
+        }
+    </style>
 </head>
+
 <body>
-    <center>
+    <video autoplay muted loop id="bg-video">
+        <source src="./bg-video.mp4" type="video/mp4">
+    </video>
+    <div class="container">
         <form action="./login.html" target="_self">
-            <h4>Welcome to my website</h4>
-        <h1>Registration Form</h1>
-        <p>Name : <input type="text" required placeholder="Enter your name"/></p>
-        <p>Email : <input type="email" placeholder="Enter your email"/></p>
-        <p>Phone no : <input type="number" placeholder="Enter your phone.no"/></p>
-        <p>Password : <input type="password" placeholder="Enter password"/></p>
-        <p>Confirm Password : <input type="password" placeholder="re-enter password"/></p>
-        <p>Gender : <input type="radio" name="gender"/>Male <input type="radio" name="gender"/>Female</p>
-        <p>D.O.B : <input type="date"></p>
-        <p>Qualification : <input type="checkbox"/>SSC <input type="checkbox"/>Intermediate <input type="checkbox"/>Diploma <input type="checkbox"/>Btech</p>
-        <p>City : <select name="city" id="city">
-            <option value="">select city</option>
-            <option value="Vijayawada">Vijayawada</option>
-            <option value="Vizag">Vizag</option>
-            <option value="Hyderabad">Hyderabad</option>
-            <option value="Banglore">Banglore</option>
-            <option value="Mumbai">Mumbai</option>
-            <option value="Pune">Pune</option>
-        </select></p>
-        <p>Upload photo : <input type="file"></p>
-        <button><b>Register</b></button>
+            <h1><u>Registration Form</u></h1>
+            <p>Name : <input type="text" required placeholder="Enter your name" /></p>
+            <p>Email : <input type="email" placeholder="Enter your email" /></p>
+            <p>Phone no : <input type="number" placeholder="Enter your phone.no" /></p>
+            <p>Password : <input type="password" placeholder="Enter password" /></p>
+            <p>Confirm Password : <input type="password" placeholder="re-enter password" /></p>
+            <p>Gender : <input type="radio" name="gender" />Male <input type="radio" name="gender" />Female</p>
+            <p>D.O.B : <input type="date"></p>
+            <p>Qualification : <input type="checkbox" />SSC <input type="checkbox" />Intermediate <input
+                    type="checkbox" />Diploma <input type="checkbox" />Btech</p>
+            <p>City : <select name="city" id="city">
+                    <option value="">select city</option>
+                    <option value="Vijayawada">Vijayawada</option>
+                    <option value="Vizag">Vizag</option>
+                    <option value="Hyderabad">Hyderabad</option>
+                    <option value="Banglore">Banglore</option>
+                    <option value="Mumbai">Mumbai</option>
+                    <option value="Pune">Pune</option>
+                </select></p>
+            <p>Upload photo : <input type="file"></p>
+            <button><b>Register</b></button>
         </form>
-    </center>
+    </div>
 </body>
+
 </html>

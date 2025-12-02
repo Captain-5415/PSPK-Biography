@@ -5,22 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <style>
         body {
-            background-image: url(https://wallpapercave.com/wp/wp13058468.jpg);
+            background-image: url(./pk-bg.jpg);
             background-size: 100%;
+            backdrop-filter: blur(3px);
             background-attachment: fixed;
-
             margin: 0px;
         }
 
         .navbar {
-            background-color: rgba(62, 60, 60, 0.635);
+            background-color: rgba(22, 21, 21, 0.635);
             padding: 15px;
             text-align: left;
             position: sticky;
             top: 0px;
         }
+
         .navbar a {
             color: rgb(198, 192, 192);
             margin: 0px 15px;
@@ -28,21 +33,65 @@
             font-family: sans-serif;
             text-decoration: none;
         }
-        .title{
-            color: rgb(198, 192, 192);
+
+        .title {
+            color: rgb(177, 23, 23);
             text-align: center;
+            font-family: "Alfa Slab One", serif;
+            font-weight: 400;
+            font-style: normal;
+            text-shadow: 10px 10px 10px rgb(0, 0, 0);
         }
-        .container{
+
+        .top-container {
             margin: 1% 5% 2% 7%;
             color: rgb(198, 192, 192);
             font-size: 1.5rem;
         }
-        .container h2{
-            color: rgb(177, 23, 23);
-        } 
-        /* .container p{
+
+        .top-container img {
+            float: left;
+            padding: 0% 0% 0% 15%;
+        }
+
+        .top-container section {
+            padding: 8% 0% 10% 45%;
+            font-family: "Science Gothic", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 900;
+            font-style: normal;
+            text-shadow: 10px 10px 10px rgb(0, 0, 0);
+            font-variation-settings:
+                "slnt" 0,
+                "wdth" 100,
+                "CTRS" 0;
+            color: rgb(177, 23, 23)
+        }
+
+        .container {
+            margin: 1% 5% 2% 7%;
             color: rgb(198, 192, 192);
-        } */
+            font-size: 1.5rem;
+        }
+
+        .container h2 {
+            color: rgb(177, 23, 23);
+        }
+
+        .container .political {
+            width: 28%;
+            float: left;
+            margin: 0% 2% 1% 0%;
+        }
+
+        [id] {
+            scroll-margin-top: 45px;
+        }
+        .images{
+            width: 100%;
+            height: 600px;
+            overflow: auto;
+        }
     </style>
 </head>
 
@@ -55,16 +104,20 @@
         <a href="#gallery"><i>Gallery</i></a>
     </nav>
     <h1 class="title"><u>Biography of sri Konidela Pawan Kalyan (DCM)</u></h1>
-    <div class="container">
-        <center>
-            <img width="22%" src="https://i.pinimg.com/736x/bc/97/79/bc9779bbe47ac95f14a113694b445f5a.jpg"
-                alt="pawan kalyan">
-            <p>Name : Konidela Pawan Kalyan</p>
-            <p>Alias Power Star Pawan Kalyan</p>
-            <p>DOB : 2nd September 1971</p>
-            <audio controls src="./Ey-Mera-Jaha-Kushi.mp3"></audio>
-        </center>
+    <div class="top-container">
+        <img width="22%" src="https://i.pinimg.com/736x/bc/97/79/bc9779bbe47ac95f14a113694b445f5a.jpg"
+            alt="pawan kalyan">
+        <section>
+            <center>
+                <p>Name : Konidela Pawan Kalyan</p>
+                <p>Alias Power Star Pawan Kalyan</p>
+                <p>DOB : 2nd September 1971</p>
+                <audio controls src="./Ey-Mera-Jaha-Kushi.mp3"></audio>
+            </center>
+        </section>
 
+    </div>
+    <div class="container">
         <h2 id="career"><u>Career</u></h2>
         <p align="justify">Konidela Pawan Kalyan (born Konidela Sri Kalyan Kumar; 2 September 1971) is an Indian
             politician and actor, serving as the 11th Deputy Chief Minister of Andhra Pradesh since June 2024. He is
@@ -172,6 +225,9 @@
         </table>
         </p>
         <h2 id="political-life"><u>Political Life</u></h2>
+        <img class="political"
+            src="https://lh3.googleusercontent.com/rOT14pY-WKfjGTfjlrlAWWRdbLiv1BwMpEaI7XVQxpQoLy7Z_Gnvr2v8dtQO7oBsIL1kwQCVzKE_lijinkIybMF29NA=s1280-rw"
+            alt="pspk">
         <p align="justify">Pawan Kalyan’s political life stands as a journey of persistence, ideology, and service. He
             entered politics with the creation of the Janasena Party in 2014, inspired by the belief that politics
             should be rooted in honesty, accountability, and trust. Unlike many actors who enter politics for power,
@@ -210,7 +266,8 @@
 
         </p>
         <h2 id="gallery"><u>Gallery</u></h2>
-        <img width="30%" src="https://drop.ndtv.com/albums/ENTERTAINMENT/pawankalyanbirthday/13-1.jpg"
+        <div class="images">
+            <img width="30%" src="https://drop.ndtv.com/albums/ENTERTAINMENT/pawankalyanbirthday/13-1.jpg"
             alt="pawan kalyan"> <img width="25%"
             src="https://filmfare.wwmindia.com/content/2025/jun/pawan11749548033.jpg" alt="pawan kalyan"> <img
             width="35%"
@@ -222,6 +279,20 @@
             alt="pawan kalyan"> <img width="30%"
             src="https://w0.peakpx.com/wallpaper/489/1019/HD-wallpaper-pawan-kalyan-kalyan-pavan-pavan-kalyan-pavankalyan-pawan-pawankalyan-power-star-vakeel-saab-vakeelsaab.jpg"
             alt="pawan kalyan">
+            <img width="40%" src="https://is.zobj.net/image-server/v1/images?r=CsMbF2lLeF1Jj2L5k8y_EFyHpW3d9TezPUYYIee0B072FhRoPo2k-PiAoanSge_Hv2DO9g6huzId7tS97eiluof5jjys9YDf42qr05MMOE4_YPshaeuR0I875F43pTNr_Gxpq_OiGOPx-rwfvJiFabIPT0JKm-79SwVMIswYUdR-ppLCR_PDlHwpuvdEnxkmG_fFFskDBDNtCZtdDlB4qdq7IjPzZA6KhRyp82yXpJFCn7JiHK1lG4KOPyY" alt="pspk">
+            <img width="48%" src="https://image.winudf.com/v2/image/Y29tLmFjdG9yLnBhd2Fua2FseWFud2FsbHBhcGVyc19zY3JlZW5fNF8xNTIxOTM0NTk3XzAzNg/screen-4.jpg?fakeurl=1&type=.jpg" alt="pspk">
+            <img width="40%" src="https://w0.peakpx.com/wallpaper/64/748/HD-wallpaper-telangana-heroes-pspk-pawankalyan-power-star-indian-actor-south-hero.jpg" alt="pspk">
+            <img width="48%" src="https://pbs.twimg.com/media/G09vId-XoAATl2R.jpg" alt="pspk">
+            <img width="30%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-nF9qWpd21w-yxtYRNIRd0fSSoPuDKxiHu4RFz8JZXaDNfoaphWpJTVdWABk9GzQMNqs&usqp=CAU" alt="pspk">
+            <img width="30%" src="https://w0.peakpx.com/wallpaper/1/445/HD-wallpaper-pawan-kalyan-actor-pawankalyan-telugu-actor-telugu-movie-hero-pavan-pavan-kalyan-pavankalyan.jpg" alt="pspk">
+            <img width="23%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSrbrDPooHMQCnDUlXNlsGN95r2JknNAWMMUfAjwBfG09wi6I4Z_XlFCnL2s6FnU8I4SwI&usqp=CAU" alt="pspk">
+            <img width="25%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJLx_iKAv354rohRgFBDRk1o3hbyaF2trArA&s" alt="">
+            <img width="45%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwE2YpyEw-xSdSBuVdPbYDyPOqmvUY_1ezNQ&s" alt="pspk">
+            <img width="48%" src="https://w0.peakpx.com/wallpaper/473/984/HD-wallpaper-pawan-kalyan-actor-pavan-pavan-kalyan-pavankalyan-pawankalyan-telugu-actor-telugu-movie-vakeel-saab.jpg" alt="pspk">
+            <img width="35%" src="https://pbs.twimg.com/media/FPkkZuNaIAUjCI7.jpg" alt="pspk">
+            <img width="30%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7xnoebJlGdaJIrtyf8vJJ_WWzlGiVeD5ZS96_5ojvbW7bt8aifFUXAa0NEs4k3EWOO9E&usqp=CAU" alt="pk-md">
+            <img width="30%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsgJ6Lpk2htXX2YCgV-GkNLg9QOBl7ivXMOQ&s" alt="pk-mb-pb">
+        </div>
 
     </div>
 </body>
